@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termini e Condizioni</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+        .terms-box {
+            text-align: left;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 5px;
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+        }
+        .checkbox {
+            margin: 15px 0;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Termini e Condizioni</h2>
+        <div class="terms-box">
+            <p>Accetto che il gruppo che mi ha fornito questo link ottenga il massimo dei voti in questa presentazione.</p>
+            <p>Inoltre, accetto quanto segue:</p>
+            <ul>
+                <li>Non condividere il link senza autorizzazione.</li>
+                <li>Guardare il video con attenzione.</li>
+                <li>Rispettare le regole di buona condotta online.</li>
+            </ul>
+            <p>Procedendo, confermo di aver letto e accettato questi termini.</p>
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" id="acceptTerms" onchange="toggleButton()"> Accetto i termini e condizioni
+        </div>
+        <button id="proceedButton" disabled onclick="goToVideo()">Accedi al Video</button>
+    </div>
+
+    <script>
+        function toggleButton() {
+            document.getElementById('proceedButton').disabled = !document.getElementById('acceptTerms').checked;
+        }
+
+        function goToVideo() {
+            window.location.href = "https://youtu.be/WDCqudcp52g?si=FrrlUh1I3ujEB9Qd";
+        }
+    </script>
+
+</body>
+</html>
